@@ -28,13 +28,13 @@ ShoeHub is a responsive, modern e-commerce demo website for showcasing shoes. Th
 
 This project was built as a portfolio piece to demonstrate:
 
-Ability to structure a modern e-commerce layout.
+• Ability to structure a modern e-commerce layout.
 
-Attention to visual hierarchy and user interface design.
+• Attention to visual hierarchy and user interface design.
 
-Clean, maintainable HTML/CSS structure.
+• Clean, maintainable HTML/CSS structure.
 
-Responsiveness and accessibility best practices.
+• Responsiveness and accessibility best practices.
 
 ## Future Enhancements
 
