@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords"
+        content="ShoeHub, shoes online, buy shoes, sneakers, athletic shoes, casual shoes, formal shoes, running shoes, men's shoes, women's shoes, kids shoes, footwear, fashion shoes, trendy sneakers, shoe store, shoe shopping, sneaker collection">
+    <meta name="description"
+        content="ShoeHub offers the latest collection of shoes and sneakers for men, women, and kids. Shop stylish, comfortable, and trendy footwear online with fast delivery and great deals.">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
     <title>ShoeHub</title>
-    <!-- GOOGLE -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,13 +22,51 @@
 <body>
     <main>
         <div class="modal pop">
-            <img src="./assets/icon/close_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="" id="cls-btn">
+            <button aria-label="close button" id="cls-btn" class="cls-btn svg__icon" onclick="closeModal()">
+                <svg width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+                    stroke="#333333">
+                    <line x1="4" y1="4" x2="20" y2="20" />
+                    <line x1="20" y1="4" x2="4" y2="20" />
+                </svg>
+            </button>
             <ul>
-                <li>Men <img src="./assets/icon/chevron_right_24dp_000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></li>
-                <li>Women <img src="./assets/icon/chevron_right_24dp_000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></li>
-                <li>Kid <img src="./assets/icon/chevron_right_24dp_000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></li>
-                <li>Sale <img src="./assets/icon/chevron_right_24dp_000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></li>
-                <li>Trending <img src="./assets/icon/chevron_right_24dp_000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></li>
+
+                <li>Men
+                    <button class="arrow__icon svg__icon" aria-label="show more">
+                        <svg width="24" height="24" viewBox="0 0 24 24" stroke="#333333" fill="none" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" id="arrow__icon">
+                            <polyline points="9 6 15 12 9 18"></polyline>
+                        </svg>
+                    </button>
+                </li>
+                <li>Women
+                    <button class="arrow__icon svg__icon" aria-label="show more">
+                        <svg width="24" height="24">
+                            <use href="#arrow__icon"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>Kid
+                    <button class="arrow__icon svg__icon" aria-label="show more">
+                        <svg width="24" height="24">
+                            <use href="#arrow__icon"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>Sale
+                    <button class="arrow__icon svg__icon" aria-label="show more">
+                        <svg width="24" height="24">
+                            <use href="#arrow__icon"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>Trending
+                    <button class="arrow__icon svg__icon" aria-label="show more">
+                        <svg width="24" height="24">
+                            <use href="#arrow__icon"></use>
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </div>
         <nav class="nav__main">
@@ -40,12 +80,19 @@
 
             <div class="nav__icon">
                 <div class="search__container">
-                    <img src="./assets/icon/search_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <img src="./assets/icon/search_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="search">
                     <input type="search" placeholder="Search your style...">
                 </div>
-                <img src="./assets/icon/search_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="search">
-                <img src="./assets/icon/shopping_bag_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <img src="./assets/icon/menu_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="" id="menu">
+                <img src="./assets/icon/search_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="search" class="search">
+                <img src="./assets/icon/shopping_bag_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="shop">
+                <button class="bgr__icon svg__icon" aria-label="Open menu" id="menu" onclick="openMenu()">
+                    <svg width="25" height="25" viewBox="0 0 24 24" id="burger__icon" stroke-width="2"
+                        stroke-linecap="round" stroke="#333333">
+                        <line x1="3" y1="6" x2="22" y2="6" />
+                        <line x1="3" y1="12" x2="22" y2="12" />
+                        <line x1="3" y1="18" x2="22" y2="18" />
+                    </svg>
+                </button>
             </div>
         </nav>
 
@@ -57,7 +104,18 @@
                         <p>Latest Sneaker Collection</p>
                         <button class="hero__btn btn">Shop Now</button>
                     </div>
-                    <img src="assets/images/pexels-feet-1840619_1280.webp" alt="">
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/pexels-feet-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/pexels-feet-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/pexels-feet.png" alt="">
+                    </picture>
                 </div>
 
                 <div class="card">
@@ -66,7 +124,20 @@
                         <p>Your look begins from the ground up</p>
                         <button class="hero__btn btn">Shop Now</button>
                     </div>
-                    <img src="assets/images/domenik2212-sneaker-4687823_1920.webp" alt="">
+
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/domenik2212-sneaker-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/domenik2212-sneaker-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/domenik2212-sneaker.png" alt="">
+                    </picture>
+
                 </div>
 
                 <div class="card">
@@ -75,7 +146,21 @@
                         <p>Every pair belongs together</p>
                         <button class="hero__btn btn">Shop Now</button>
                     </div>
-                    <img src="assets/images/stocksnap-people-2585627_1280.webp" alt="">
+
+
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/stocksnap-people-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/stocksnap-people-large.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/stocksnap-people.png" alt="">
+                    </picture>
+
                 </div>
 
             </div>
@@ -85,34 +170,75 @@
 
         <section class="feature --page">
             <h2 class="title">Featured</h2>
+
             <div class="feature__container">
+
                 <div class="card__feature">
                     <div class="feature__content">
 
                         <button class="feature__btn btn">Shop</button>
                     </div>
-                    <img src="assets/images/monfocus-sports-shoe-2465915_1920.webp" alt="">
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/monfocus-sports-shoe-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/monfocus-sports-shoe-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/monfocus-sports-shoe.png" alt="">
+                    </picture>
                 </div>
+
                 <div class="card__feature">
                     <div class="feature__content">
                         <button class="feature__btn btn">Shop</button>
                     </div>
-                    <img src="assets/images/marzuk-nike-5644799_1280.webp" alt="">
+
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/marzuk-nike-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/marzuk-nike-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/marzuk-nike.png" alt="">
+                    </picture>
+
                 </div>
 
             </div>
         </section>
 
         <section class="trending">
+
             <h2 class="title">Trending</h2>
+
             <div class="trending__container">
+
                 <div class="trending__card">
                     <div class="trending__card-content">
                         <h3>Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, adipisci?</p>
                         <button class="trnd__btn btn">Shop</button>
                     </div>
-                    <img src="assets/images/marzuk-sneakers-5578127_1280.webp" alt="">
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/marzuk-sneakers-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/marzuk-sneakers-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/marzuk-sneakers.png" alt="">
+                    </picture>
                 </div>
 
 
@@ -122,7 +248,18 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, adipisci?</p>
                         <button class="trnd__btn btn">Shop</button>
                     </div>
-                    <img src="assets/images/greyerbaby-shoes-434918_1920.webp" alt="">
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/greyerbaby-shoes-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/greyerbaby-shoes-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/greyerbaby-shoes.png" alt="">
+                    </picture>
                 </div>
 
 
@@ -133,7 +270,18 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, adipisci?</p>
                         <button class="trnd__btn btn">Shop</button>
                     </div>
-                    <img src="assets/images/u_2k4dtu9w7u-shoes-8212405_1920.webp" alt="">
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/u_2k4dtu9w7u-shoes-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/u_2k4dtu9w7u-shoes-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/u_2k4dtu9w7u-shoes.png" alt="">
+                    </picture>
                 </div>
 
 
@@ -143,7 +291,18 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, adipisci?</p>
                         <button class="trnd__btn btn">Shop</button>
                     </div>
-                    <img src="assets/images/michaelstnr-shoes-3780166_1920.webp" alt="">
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="assets/images/michaelstnr-shoes-large.webp" type="image/webp"
+                            media="(min-width: 1024px)">
+
+                        <!-- Mobile -->
+                        <source srcset="assets/images/michaelstnr-shoes-small.webp" type="image/webp"
+                            media="(min-width: 320px)">
+
+                        <!-- Fallback -->
+                        <img src="assets/images/michaelstnr-shoes.png" alt="">
+                    </picture>
                 </div>
 
             </div>
@@ -152,10 +311,20 @@
         <section class="latest">
             <h2 class="title">Latest Shoes</h2>
             <div class="card__container">
-
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/Nike_Vapor_Lite.webp" alt="Nike Vapor Lite">
+                        <picture>
+                            <!-- Desktop -->
+                            <source srcset="assets/images/shoes/Nike_Vapor_Lite_large.webp" type="image/webp"
+                                media="(min-width:1024px)">
+
+                            <!-- Mobile -->
+                            <source srcset="assets/images/shoes/Nike_Vapor_Lite_small.webp" type="image/webp"
+                                media="(min-width:320px)">
+
+                            <!-- Fallback -->
+                            <img src="assets/images/shoes/Nike_Vapor_Lite.png" alt="Nike Vapor Lite">
+                        </picture>
                     </div>
                     <div class="detail">
                         <h3>Nike Vapor Lite</h3>
@@ -166,7 +335,18 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/Nike_Air_max_nova.webp" alt="Nike Air Max">
+                        <picture>
+                            <!-- Desktop -->
+                            <source srcset="assets/images/shoes/Nike_Vapor_Lite_large.webp" type="image/webp"
+                                media="(min-width:1024px)">
+
+                            <!-- Mobile -->
+                            <source srcset="assets/images/shoes/Nike_Vapor_Lite_small.webp" type="image/webp"
+                                media="(min-width:320px)">
+
+                            <!-- Fallback -->
+                            <img src="assets/images/shoes/Nike_Air_max_nova_large.webp" alt="Nike Air Max">
+                        </picture>
                     </div>
                     <div class="detail">
                         <h3>Nike Air Max</h3>
@@ -177,7 +357,7 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/Air_Jordan_1_Mid_SE_Men's_Shoes.webp" alt="Air Jordan 1">
+                        <img src="assets/images/shoes/Air_Jordan_1_Mid_SE_Men's_Shoes_large.webp" alt="Air Jordan 1">
                     </div>
                     <div class="detail">
                         <h3>Air Jordan 1</h3>
@@ -188,7 +368,7 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/explosive_agility_freak_flight.webp" alt="Freak Flight">
+                        <img src="assets/images/shoes/explosive_agility_freak_flight_large.webp" alt="Freak Flight">
                     </div>
                     <div class="detail">
                         <h3>Freak Flight</h3>
@@ -199,7 +379,7 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/elegant_graceful_crystal_stride.webp" alt="Crystal Stride">
+                        <img src="assets/images/shoes/elegant_graceful_crystal_stride_large.webp" alt="Crystal Stride">
                     </div>
                     <div class="detail">
                         <h3>Crystal Stride</h3>
@@ -210,7 +390,7 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/high-energy-control-caution-pulse.webp" alt="Caution Pulse">
+                        <img src="assets/images/shoes/high-energy-control-caution-pulse_large.webp" alt="Caution Pulse">
                     </div>
                     <div class="detail">
                         <h3>Caution Pulse</h3>
@@ -218,8 +398,6 @@
                         <p class="item__price">$155</p>
                     </div>
                 </div>
-
-
             </div>
             </div>
         </section>

@@ -7,8 +7,9 @@ const card = document.querySelectorAll(".card");
 
 card.forEach((_, index) => {
     const btn = document.createElement('button');
-
     if (index === 0) btn.classList.add('active');
+
+    btn.setAttribute("aria-label", `slide ${index + 1}`);
 
     btn.addEventListener('click', () => {
 
@@ -59,14 +60,12 @@ setInterval(() => {
 
 /*MODAL*/
 
-const menu = document.getElementById('menu');
 const pop = document.querySelector('.pop');
-const cls = document.getElementById('cls-btn')
 
-menu.addEventListener('click', () => {
+function openMenu() {
     pop.classList.remove('pop');
-});
+}
 
-cls.addEventListener('click', () => {
+function closeModal() {
     pop.classList.add('pop');
-});
+}
