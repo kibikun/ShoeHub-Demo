@@ -259,6 +259,7 @@ nav {
     gap: 10px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     color: #ffffff;
+    line-height: 1.5em;
 }
 
 .trending__card-content h3 {
