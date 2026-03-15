@@ -23,47 +23,44 @@
     <main>
         <div class="modal pop">
             <button aria-label="close button" id="cls-btn" class="cls-btn svg__icon" onclick="closeModal()">
-                <svg width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
-                    stroke="#333333">
-                    <line x1="4" y1="4" x2="20" y2="20" />
-                    <line x1="20" y1="4" x2="4" y2="20" />
+                <svg width="24" height="24">
+                    <use href="assets/icon/svg/icons.svg#cls-modal-icon"></use>
                 </svg>
             </button>
             <ul>
 
                 <li>Men
-                    <button class="arrow__icon svg__icon" aria-label="show more">
-                        <svg width="24" height="24" viewBox="0 0 24 24" stroke="#333333" fill="none" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" id="arrow__icon">
-                            <polyline points="9 6 15 12 9 18"></polyline>
+                    <button class="svg__icon" aria-label="show more">
+                        <svg width="24" height="24">
+                            <use href="assets/icon/svg/icons.svg#arrow__icon"></use>
                         </svg>
                     </button>
                 </li>
                 <li>Women
-                    <button class="arrow__icon svg__icon" aria-label="show more">
+                    <button class="svg__icon" aria-label="show more">
                         <svg width="24" height="24">
-                            <use href="#arrow__icon"></use>
+                            <use href="assets/icon/svg/icons.svg#arrow__icon"></use>
                         </svg>
                     </button>
                 </li>
                 <li>Kid
-                    <button class="arrow__icon svg__icon" aria-label="show more">
+                    <button class="svg__icon" aria-label="show more">
                         <svg width="24" height="24">
-                            <use href="#arrow__icon"></use>
+                            <use href="assets/icon/svg/icons.svg#arrow__icon"></use>
                         </svg>
                     </button>
                 </li>
                 <li>Sale
-                    <button class="arrow__icon svg__icon" aria-label="show more">
+                    <button class="svg__icon" aria-label="show more">
                         <svg width="24" height="24">
-                            <use href="#arrow__icon"></use>
+                            <use href="assets/icon/svg/icons.svg#arrow__icon"></use>
                         </svg>
                     </button>
                 </li>
                 <li>Trending
-                    <button class="arrow__icon svg__icon" aria-label="show more">
+                    <button class="svg__icon" aria-label="show more">
                         <svg width="24" height="24">
-                            <use href="#arrow__icon"></use>
+                            <use href="assets/icon/svg/icons.svg#arrow__icon"></use>
                         </svg>
                     </button>
                 </li>
@@ -86,11 +83,8 @@
                 <img src="./assets/icon/search_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="search" class="search">
                 <img src="./assets/icon/shopping_bag_24dp_333333_FILL0_wght400_GRAD0_opsz24.svg" alt="shop">
                 <button class="bgr__icon svg__icon" aria-label="Open menu" id="menu" onclick="openMenu()">
-                    <svg width="25" height="25" viewBox="0 0 24 24" id="burger__icon" stroke-width="2"
-                        stroke-linecap="round" stroke="#333333">
-                        <line x1="3" y1="6" x2="22" y2="6" />
-                        <line x1="3" y1="12" x2="22" y2="12" />
-                        <line x1="3" y1="18" x2="22" y2="18" />
+                    <svg width="24" height="24">
+                        <use href="assets/icon/svg/icons.svg#burger-icon"></use>
                     </svg>
                 </button>
             </div>
@@ -335,20 +329,19 @@
                         <p class="item__price">$149</p>
                     </div>
                 </div>
-
                 <div class="card__item">
                     <div class="item">
                         <picture>
                             <!-- Desktop -->
-                            <source srcset="assets/images/shoes/Nike_Vapor_Lite_large.webp" type="image/webp"
+                            <source srcset="assets/images/shoes/Nike_Air_max_nova_large.webp" type="image/webp"
                                 media="(min-width:1024px)">
 
                             <!-- Mobile -->
-                            <source srcset="assets/images/shoes/Nike_Vapor_Lite_small.webp" type="image/webp"
+                            <source srcset="assets/images/shoes/Nike_Air_max_nova_small.webp" type="image/webp"
                                 media="(min-width:320px)">
 
                             <!-- Fallback -->
-                            <img src="assets/images/shoes/Nike_Air_max_nova_large.webp" alt="Nike Air Max">
+                            <img src="assets/images/shoes/Nike_Air_max_nova.png" alt="Nike Air Max">
                         </picture>
                     </div>
                     <div class="detail">
@@ -360,7 +353,18 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/Air_Jordan_1_Mid_SE_Men's_Shoes_large.webp" alt="Air Jordan 1">
+                        <picture>
+                            <!-- Desktop -->
+                            <source srcset="assets/images/shoes/Air_Jordan_1_Mid_SE_Men's_Shoes_large.webp"
+                                type="image/webp" media="(min-width:1024px)">
+
+                            <!-- Mobile -->
+                            <source srcset="assets/images/shoes/Air_Jordan_1_Mid_SE_Men's_Shoes_small.webp"
+                                type="image/webp" media="(min-width:320px)">
+
+                            <!-- Fallback -->
+                            <img src="assets/images/shoes/Air_Jordan_1_Mid_SE_Men's_Shoes.png" alt="Air Jordan 1">
+                        </picture>
                     </div>
                     <div class="detail">
                         <h3>Air Jordan 1</h3>
@@ -371,7 +375,18 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/explosive_agility_freak_flight_large.webp" alt="Freak Flight">
+                        <picture>
+                            <!-- Desktop -->
+                            <source srcset="assets/images/shoes/explosive_agility_freak_flight_large.webp"
+                                type="image/webp" media="(min-width:1024px)">
+
+                            <!-- Mobile -->
+                            <source srcset="assets/images/shoes/explosive_agility_freak_flight_small.webp"
+                                type="image/webp" media="(min-width:320px)">
+
+                            <!-- Fallback -->
+                            <img src="assets/images/shoes/explosive_agility_freak_flight.png" alt="Freak Flight">
+                        </picture>
                     </div>
                     <div class="detail">
                         <h3>Freak Flight</h3>
@@ -382,7 +397,18 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/elegant_graceful_crystal_stride_large.webp" alt="Crystal Stride">
+                        <picture>
+                            <!-- Desktop -->
+                            <source srcset="assets/images/shoes/elegant_graceful_crystal_stride_large.webp"
+                                type="image/webp" media="(min-width:1024px)">
+
+                            <!-- Mobile -->
+                            <source srcset="assets/images/shoes/elegant_graceful_crystal_stride_small.webp"
+                                type="image/webp" media="(min-width:320px)">
+
+                            <!-- Fallback -->
+                            <img src="assets/images/shoes/elegant_graceful_crystal_stride.png" alt="Crystal Stride">
+                        </picture>
                     </div>
                     <div class="detail">
                         <h3>Crystal Stride</h3>
@@ -393,7 +419,18 @@
 
                 <div class="card__item">
                     <div class="item">
-                        <img src="assets/images/shoes/high-energy-control-caution-pulse_large.webp" alt="Caution Pulse">
+                        <picture>
+                            <!-- Desktop -->
+                            <source srcset="assets/images/shoes/high-energy-control-caution-pulse_large.webp"
+                                type="image/webp" media="(min-width:1024px)">
+
+                            <!-- Mobile -->
+                            <source srcset="assets/images/shoes/high-energy-control-caution-pulse_small.webp"
+                                type="image/webp" media="(min-width:320px)">
+
+                            <!-- Fallback -->
+                            <img src="assets/images/shoes/high-energy-control-caution-pulse.png" alt="Caution Pulse">
+                        </picture>
                     </div>
                     <div class="detail">
                         <h3>Caution Pulse</h3>
@@ -404,6 +441,26 @@
             </div>
             </div>
         </section>
+        <footer>
+            <div class="footer__container">
+                <a href="https://github.com/kibikun/ShoeHub-Demo" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open source code in Github">
+                    <svg width="18" height="18">
+                        <use href="assets/icon/svg/icons.svg#github-icon"></use>
+                    </svg>
+                    View Source Code
+                </a>
+
+                <div class="credit__container">
+                    <p>
+                        © Ed Kerby Paloga |
+                        Credits : <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">
+                            Pexel</a> | <a href="https://pixabay.com/" target="_blank"
+                            rel="noopener noreferrer">Pixabay</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
     </main>
     <script src="./assets/js/script.js"></script>
 </body>
