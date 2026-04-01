@@ -29,7 +29,6 @@
 
     .card__content p {
         font-size: 1.4rem;
-        /* margin-bottom: 10px; */
     }
 
     .hero__btn {
@@ -92,7 +91,6 @@
 
     .card__content p {
         font-size: 1.5rem;
-        /* margin-bottom: 10px; */
     }
 
     .hero__btn {
@@ -241,9 +239,6 @@
 /* 1200 / 16 = 75 */
     {
 
-    /* .card {
-        height: 800px;
-    } */
     .card img {
         object-position: center calc(50%);
     }

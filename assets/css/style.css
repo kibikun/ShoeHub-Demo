@@ -385,7 +385,8 @@ nav {
 .footer__container {
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 .footer__container a {
@@ -396,16 +397,6 @@ nav {
     gap: 5px;
     text-decoration: none;
     color: #000;
-}
-
-.credit__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.credit__container a {
-    display: inline;
 }
 
 .footer__container a:hover {
